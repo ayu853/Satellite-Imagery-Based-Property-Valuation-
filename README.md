@@ -21,7 +21,7 @@ Ensure you have Python 3.10+ installed. It is recommended to run this in Google 
 Clone the repository and install the required libraries:
 
 ```bash
-git clone (https://github.com/ayu853/Satellite-Imagery-Based-Property-Valuation.git)
+git clone https://github.com/ayu853/Satellite-Imagery-Based-Property-Valuation.git
 cd Satellite-Imagery-Based-Property-Valuation
 ```
 3. Data Preparation
