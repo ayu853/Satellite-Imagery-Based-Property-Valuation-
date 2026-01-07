@@ -40,6 +40,7 @@ CSV Files: Ensure train.csv and test (2).csv are in the root directory.
 
 5. 24117032_final: Final predictions on test(2).csv
 6. 24117032_report: Final project report.
+7. Property_Valuation_without_images.ipynb: Model without using images that is using lat and long as numerical data.
 
 # Running the Prediction
 To generate predictions on the test set using the saved model:
