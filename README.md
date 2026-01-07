@@ -43,21 +43,33 @@ CSV Files: Ensure train.csv and test (2).csv are in the root directory.
 7. Property_Valuation_without_images.ipynb: Model without using images that is using lat and long as numerical data.
 
 # Running the Prediction
-To generate predictions on the test set using the saved model:
+To replicate this project or train the model from scratch, follow these steps in order:
 
-```bash
-import tensorflow as tf
-import joblib
-import numpy as np
+1. Data Acquisition
 
-# Load model and scaler
-model = tf.keras.models.load_model('multimodal_property_model.keras')
-scaler = joblib.load('property_scaler.pkl')
+    a. First, run the data_fetcher.py script to acquire the necessary satellite imagery.
 
-# Run prediction (ensure data is preprocessed and scaled)
-# preds_log = model.predict(test_generator)
-# final_prices = np.expm1(preds_log)
-```
+    b. The script interfaces with the Mapbox Static Images API to download high-resolution tiles based on property coordinates.
+
+    c. It ensures a 1:1 mapping between property IDs and image files, verifying a total of 21,506 unique images.
+
+
+Prerequisite: You will need a Mapbox API Token.
+
+2. Model Training & Evaluation
+
+    a. Once the images are secured in the designated directory, open and run the preprocessing&model_training.ipynb notebook.
+
+
+    b. Data Preprocessing: This step cleans the tabular data, performs One-Hot Encoding on zip codes, and applies log-transformation to the property prices.
+
+
+
+    c. Training: The notebook builds the dual-branch Multi-Modal Neural Network and trains it using both the images and tabular features.
+
+
+
+    d. Result: This process generates the final multimodal_property_model.keras and the property_scaler.pkl file.
 
 
 
