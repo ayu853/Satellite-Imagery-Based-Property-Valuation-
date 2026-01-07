@@ -38,6 +38,9 @@ CSV Files: Ensure train.csv and test (2).csv are in the root directory.
 
 4. property_scaler.pkl: The saved scaler used to normalize input features.
 
+5. 24117032_final: Final predictions on test(2).csv
+6. 24117032_report: Final project report.
+
 # Running the Prediction
 To generate predictions on the test set using the saved model:
 
